@@ -1,0 +1,294 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* body{
+    margin: 0px;
+    background-color: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+} */
+
+
+body {
+    background: #f8f8f8;
+    color: #111;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    background: white;
+    justify-content: space-between;
+}
+
+
+
+header h1 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+.container {
+    /* max-width: 1200px; */
+    /* margin: 40px auto; */
+    padding: 0 20px;
+}
+
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.slides img {
+    width: 70vw;
+    height: auto;
+    /* 20px */
+}
+
+.home_body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    /* margin-top: 25vh;*/
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.inline_row {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.home_hero_img {
+    height: 35vh;
+    margin-right: 4vw;
+}
+
+.home_p {
+    font-size: 21px;
+    width: 40vw;
+    font-weight: 600;
+}
+
+.main_btn {
+    padding: 10px 30px;
+    border-radius: 5px;
+    background-color: black;
+    color: #f2f2f2;
+    border: 0px;
+    cursor: pointer;
+}
+
+.main_btn a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 23px;
+    /* font-weight: 600; */
+}
+
+/* header{
+    width: 100vw;
+    background-color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+} */
+
+.logo {
+    height: 40px;
+    width: auto;
+    margin-right: 5px;
+}
+
+.logo_cont {
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.logo_cont {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.website {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 270px;
+    max-height: 70vh;
+    max-width: 100%;
+    margin-right: 20px;
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.website:last-child {
+    margin-right: 0px;
+}
+
+.img_conte {
+    height: 50%;
+    background-color: #d9d9d9;
+    border-radius: 3px 3px 0px 0px;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.pharouhfrog_img {
+    background-image: url('./imgs/pharouh_sys.png');
+}
+
+.petfast_img {
+    background-image: url('./imgs/petfast.png');
+}
+
+
+.header_cont {
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.linko {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+.linko:hover {
+    border: 1px solid black;
+    border-radius: 3px;
+    /* transition: border 0.3s ease; */
+}
+
+.website_title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.portfoilo_main {
+    padding: 0px 10px;
+}
+
+.website_txt_cont {
+    padding: 10px;
+}
+
+.none {
+    display: none;
+}
+
+.slides img {
+    margin-right: 10px;
+}
+
+.slides img:last-child {
+    margin-right: 0px;
+}
+
+.body_in_item {
+    overflow-x: hidden;
+}
+
+.controler_icon {
+    height: 20px;
+    width: auto;
+    /* position: absolute;
+    top: 50%; */
+    cursor: pointer;
+}
+
+.right_arr {
+    right: 5px;
+}
+
+.left_arr {
+    left: 25px;
+}
+
+.slider {
+    position: relative;
+}
+
+.controls_ {
+    padding: 0px 3px;
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    width: 100vw;
+    justify-content: space-between;
+}
+
+.hido {
+    /* display: none; */
+    visibility: hidden;
+}
+
+.custom_link{
+    font-size: 16px !important;
+}
+
+.home_cont{
+    margin-top: 25vh;
+}
+
+.home_footer{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+.home_footer a{
+    text-decoration: none;
+}
+
+.home_footer a:hover{
+    text-decoration: underline;
+}
+
+.header_link{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.header_link:hover{
+    text-decoration: underline;
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (max-width: 675px) {
+    .home_cont {
+        flex-direction: column;
+    }
+
+    .home_p {
+        font-size: 18px;
+        width: 60vw;
+    }
+}
