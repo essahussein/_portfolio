@@ -1,113 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Basic Image Slider</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: #111;
-    }
-
-    .slider {
-      position: relative;
-      width: 600px;
-      height: 350px;
-      overflow: hidden;
-      border-radius: 10px;
-    }
-
-    .slides {
-      display: flex;
-      width: 100%;
-      height: 100%;
-      transition: transform 0.5s ease;
-    }
-
-    .slides img {
-      width: 600px;
-      height: 350px;
-      object-fit: cover;
-    }
-
-    .btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(255, 255, 255, 0.6);
-      border: none;
-      font-size: 24px;
-      padding: 5px 10px;
-      cursor: pointer;
-      border-radius: 50%;
-    }
-
-    .btn:hover {
-      background: white;
-    }
-
-    .prev {
-      left: 10px;
-    }
-
-    .next {
-      right: 10px;
-    }
-  </style>
+  <title>pharouh frog</title>
+  <link href="./style.css" rel="stylesheet">
 </head>
-<body>
 
-  <div class="slider">
-    <div class="slides">
-      <img src="https://picsum.photos/id/1015/600/350" alt="img1">
-      <img src="https://picsum.photos/id/1016/600/350" alt="img2">
-      <img src="https://picsum.photos/id/1018/600/350" alt="img3">
+<body class="body_in_item">
+  <header class="row">
+    <a href="./index.html" class=" inline_row logo_cont">
+      <img src="./imgs/pharaohfrog.png" alt="logo" class="logo">
+      <div>pharouhfrog</div>
+    </a>
+
+    <a href="./portfolio.html" class="header_link">portfolio</a>
+  </header>
+
+  <main class="container">
+    <div class="row header_cont">
+      <h2>petfast</h2>
+      <button class="main_btn">
+        <a href="https://petfast.shop/" target="_blank" rel="noopener noreferrer" class="custom_link">Visit Website</a>
+      </button>
+    </div>
+    <div class="slider" id="slider__">
+      <div class="slides" id="slides">
+        <img src="./imgs/1_.jpg" alt="slide 1" />
+        <img src="./imgs/2_.jpg" alt="slide 2" />
+        <img src="./imgs/3_.jpg" alt="slide 3" />
+      </div>
+
+      <div class="row controls_">
+        <img id="prev" class="controler_icon left_arr hido" src="./imgs/left_.svg" alt="left_arr">
+        <img id="next" class="controler_icon right_arr" src="./imgs/right_.svg" alt="right_arr">
+      </div>
     </div>
 
-    <button class="btn prev">&#10094;</button>
-    <button class="btn next">&#10095;</button>
+    <h2>PetFast - Shopify Customization & Feature Development</h2>
+    <p class="desc">
+      <b>PetFast</b> is a Shopify-based online pet shop where we handled deep theme customization and developed unique features to make the store truly stand out.
+Our work focused on performance, interactivity, and giving customers a seamless, engaging shopping experience.</p>
+
+    <p>We enhanced the site’s design through custom-coded Shopify blocks, integrated a “Notify Me” feature for out-of-stock products, and added a smooth custom animation on <a href="https://petfast.shop/pages/the-fresh-pack?_pos=1&_psq=fresh&_ss=e&_v=1.0" target="_blank">the Fresh Pack page</a>
+ to showcase products with personality and motion.</p>
+
+    <p>With <b>PetFast</b>, we:</p>
+    <ul>
+      <li>Customized the Shopify theme code to improve layout and user flow.</li>
+      <li>Built custom Shopify blocks to support new content and dynamic sections.</li>
+      <li>Developed the “Notify Me” functionality, giving customers instant updates when products are back in stock.</li>
+      <li>Designed and implemented custom animations for a modern, branded experience.</li>
+    </ul>
+      <p>Through precision coding and creative design, we helped PetFast evolve beyond a standard Shopify template - turning it into a store that feels alive, polished, and uniquely theirs.</p>
+  
+  
   </div>
 
-  <script>
-    const slides = document.querySelector('.slides');
-    const images = document.querySelectorAll('.slides img');
-    const next = document.querySelector('.next');
-    const prev = document.querySelector('.prev');
+  </main>
 
-    let index = 0;
+    <footer class="home_footer website_footer">
+        <div class="contact_us" >contact us? <a href="tel:+201094602675" >+20 109 460 2675</a></div>
+        <div>
+            &copy; 2025 pharouhfrog. all rights reserved.
+        </div>
+    </footer>
 
-    function showSlide(i) {
-      if (i >= images.length) index = 0;
-      if (i < 0) index = images.length - 1;
-      slides.style.transform = `translateX(${-index * 600}px)`;
-    }
-
-    next.addEventListener('click', () => {
-      index++;
-      showSlide(index);
-    });
-
-    prev.addEventListener('click', () => {
-      index--;
-      showSlide(index);
-    });
-
-    // Auto slide loop
-    setInterval(() => {
-      index++;
-      showSlide(index);
-    }, 3000);
-  </script>
-
+  <script src="./script.js"></script>
 </body>
+
 </html>
