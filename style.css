@@ -156,7 +156,7 @@ header h1 {
     background-color: white;
     border-radius: 3px;
     border: 1px solid #ccc;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .website:last-child {
@@ -212,7 +212,10 @@ header h1 {
 }
 
 .portfoilo_main {
-    padding: 0px 10px;
+    padding: 0px 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .website_txt_cont {
@@ -333,13 +336,16 @@ header h1 {
 
 /*Small devices (landscape phones, 576px and up)*/
 @media (max-width: 675px) {
+    .contt{
+        width: min-content;
+    }
     .home_cont {
         flex-direction: column;
         margin-top: 7vh;
     }
 
     .home_p {
-        font-size: 17px;
+        font-size: 18px;
         width: 60vw;
     }
 
